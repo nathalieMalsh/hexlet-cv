@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 import { Link } from '@inertiajs/react'
 
-export type WebinarsEntry = {
+export type WebinarDTO = {
     id: number
     name: string
     date: string
@@ -13,8 +13,8 @@ export type WebinarsEntry = {
     isPublished: boolean
 }
 
-export type TProps = {
-    webinars: WebinarsEntry[]
+interface TProps {
+    webinars: WebinarDTO[]
 }
 
 export const AdminWebinars: React.FC<TProps> = (props): JSX.Element => {

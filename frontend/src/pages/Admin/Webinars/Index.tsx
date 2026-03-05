@@ -1,10 +1,14 @@
-import { AdminWebinars, type TProps } from "@widgets/admin-webinars"
+import { AdminWebinars, type WebinarDTO } from "@widgets/admin-webinars"
 import { AdminLayout } from "../components/AdminLayout"
 
-const Interview = ({ webinars }: TProps) => {
+type WebinarsPageProps = {
+    webinars: WebinarDTO[]
+}
+
+const Webinars = ({ webinars }: WebinarsPageProps) => {
     return <AdminWebinars webinars={webinars}/>
 }
 
-Interview.layout = (page: React.ReactNode) => <AdminLayout>{page}</AdminLayout>
+Webinars.layout = (page: React.ReactNode) => <AdminLayout>{page}</AdminLayout>
 
-export default Interview
+export default Webinars
