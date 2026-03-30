@@ -25,6 +25,103 @@ export default {
         'Свежие джуниор-вакансии и стажировки каждый день.',
       title: 'Наше сообщество',
     },
+    header: {
+      auth: {
+        account: 'Личный кабинет',
+        admin: 'Панель управления',
+        signOut: 'Выйти',
+        tryFreeLine1: 'Попробовать',
+        tryFreeLine2: 'бесплатно',
+        signIn: 'Войти',
+        signUp: 'Регистрация',
+      },
+    },
+    auth: {
+      social: {
+        providers: {
+          google: 'Google',
+          github: 'Github',
+        },
+      },
+      signUp: {
+        title: 'Регистрация',
+        subtitle: 'Используйте привычный способ входа',
+        divider: 'или',
+        fields: {
+          lastName: {
+            label: 'Фамилия',
+            placeholder: 'Фамилия',
+          },
+          firstName: {
+            label: 'Имя',
+            placeholder: 'Имя',
+          },
+          name: {
+            errors: {
+              required: 'Введите имя',
+              too_short: 'Имя слишком короткое',
+              too_long: 'Имя слишком длинное',
+              invalid_format: 'Некорректный формат имени',
+            },
+          },
+          email: {
+            label: 'Email',
+            placeholder: 'E-mail',
+            errors: {
+              required: 'Введите email',
+              too_long: 'Email слишком длинный',
+              invalid_format: 'Некорректный формат email',
+            },
+          },
+          password: {
+            label: 'Пароль',
+            placeholder: 'Пароль',
+            errors: {
+              required: 'Введите пароль',
+              too_long: 'Пароль слишком длинный',
+              too_short: 'Пароль должен быть не короче 8 символов',
+              invalid_format: 'Некорректный формат пароля',
+            },
+          },
+          terms: {
+            errors: {
+              required: 'Вы должны принять условия',
+            },
+            label: 'Я принимаю условия',
+          },
+        },
+        signInLink: 'Уже есть аккаунт? Войти',
+        submit: 'Зарегистрироваться',
+      },
+      signIn: {
+        title: 'Войти',
+        subtitle: 'Используйте привычный способ входа',
+        divider: 'или',
+        fields: {
+          email: {
+            label: 'Email',
+            placeholder: 'E-mail',
+            errors: {
+              invalid: 'Неверный email или пароль',
+              required: 'Введите email',
+              too_long: 'Email слишком длинный',
+              invalid_format: 'Некорректный формат email',
+            },
+          },
+          password: {
+            label: 'Пароль',
+            placeholder: 'Your password',
+            errors: {
+              required: 'Введите пароль',
+              too_long: 'Пароль слишком длинный',
+              too_short: 'Пароль должен быть не короче 8 символов',
+              invalid_format: 'Некорректный формат пароля',
+            },
+          },
+        },
+        submit: 'Войти',
+      },
+    },
     homePage: {
       greetings: 'Добро пожаловать!',
       aboutUs: {
@@ -89,42 +186,39 @@ export default {
       },
       trainingPrograms: {
         title: 'Наши программы обучения',
-        cards: {
-          jobSearch: {
-            title: 'Как искать работу',
-            description:
-              'Стратегия поиска, позиционирование, резюме, собеседования.',
-            button: 'Узнать подробнее',
-          },
-          freelance: {
-            title: 'Как работать на фрилансе',
-            description:
-              'Портфолио, бриф, коммуникации, ценообразование, договорённости.',
-            button: 'Узнать подробнее',
-          },
-          foreignJobs: {
-            title: 'Как искать валютную работу',
-            description:
-              'Рынки, площадки, подготовка профилей и откликов на английском.',
-            button: 'Узнать подробнее',
-          },
-        },
+        button: 'Узнать подробнее',
+      },
+      performanceReview: {
+        title: 'Performance review и определение грейда',
+        button: 'Записаться',
       },
       knowledgeBaseAndInterview: {
         title: 'База знаний и интервью',
         knowledgeBaseTitle: 'База знаний',
-        knowledgeBaseDescription: 'Пошаговые гайды, чек-листы и шаблоны для поиска работы.',
+        knowledgeBaseDescription:
+          'Пошаговые гайды, чек-листы и шаблоны для поиска работы.',
         interviewQuestionsTitle: 'Вопросы с собеседований',
-        interviewQuestionsDescription: 'Коллекция реальных вопросов и ответов по ролям и стеку.',
+        interviewQuestionsDescription:
+          'Коллекция реальных вопросов и ответов по ролям и стеку.',
         realInterviewVideosTitle: 'Записи реальных собесов',
-        realInterviewVideosDescription: 'Разбор интервью с комментариями экспертов и чек-листами.',
+        realInterviewVideosDescription:
+          'Разбор интервью с комментариями экспертов и чек-листами.',
         button: 'Получить доступ',
       },
       webinars: {
         title: 'Вебинары с HR и экспертами',
         viewSchedule: 'Смотреть расписание',
       },
-
+      ourTeam: {
+        sectionTitle: 'Наша команда',
+        aboutBadge: 'О нас',
+      },
+      totaAi: {
+        aiAssistant: 'ИИ-помощник',
+        title: 'Тота ИИ — агент-ускоритель карьеры',
+        description:
+          'Помогает с резюме, откликами, перепиской с рекрутерами и подготовкой к собеседованиям.',
+      },
     },
     accountPage: {
       purchases: {
@@ -145,9 +239,38 @@ export default {
           receipt: 'Чек',
         },
       },
+      progress: {
+        title: 'Моё обучение',
+        dates: {
+          today: 'обновлено сегодня',
+          yesterday: 'обновлено вчера',
+          days_ago: 'обновлено {{count}} дн. назад',
+        },
+        status: {
+          done: 'Завершено',
+          inProgress: 'В процессе',
+        },
+        programBadge: {
+          newProgram: 'Новый',
+          completedProgram: 'Сертификат',
+        },
+      },
+      studyPrograms: {
+        title: 'Программы обучения',
+        noPrograms: 'Пока нет активных программ',
+        incorrectData: 'Произошла ошибка при загрузке программ',
+      },
+      notifications: {
+        title: 'Уведомления',
+        today: 'сегодня',
+        yesterday: 'вчера',
+        daysAgo: 'давно',
+        noNotifications: 'Уведомлений нет',
+      },
     },
     emptyPlaceholders: {
       noPurchasesTitle: 'У вас еще нет подписок и заказов',
+      noLearningProgress: 'Начните обучение сейчас',
     },
     activityCards: {
       courses_in_process: 'Курсов в работе',
@@ -158,6 +281,8 @@ export default {
     },
     buttonsLabels: {
       goToCatalog: 'В каталог',
+      open: 'Открыть',
+      continue: 'Продолжить',
     },
     adminPage: {
       header: {

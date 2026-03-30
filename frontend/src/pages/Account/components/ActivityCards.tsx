@@ -9,6 +9,9 @@ import {
 import { useTranslation } from 'react-i18next'
 import { usePage } from '@inertiajs/react'
 
+/**
+ * Отображает набор карточек активности пользователя в личном кабинете.
+ */
 export const ActivityCards: React.FC = () => {
   const { props } = usePage()
   const data = props.activityCards
@@ -17,7 +20,7 @@ export const ActivityCards: React.FC = () => {
   if (!data) return null
 
   return (
-    <SimpleGrid cols={{ base: 1, sm: 4, lg: 4 }} spacing="sm">
+    <SimpleGrid cols={{ base: 1, xs: 2, lg: 4 }} spacing="sm">
       <DashboardCard
         label={t('activityCards.courses_in_process')}
         value={data.coursesCount}
