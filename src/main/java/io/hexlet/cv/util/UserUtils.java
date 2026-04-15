@@ -1,6 +1,7 @@
 package io.hexlet.cv.util;
 
 import io.hexlet.cv.handler.exception.ResourceNotFoundException;
+import io.hexlet.cv.handler.exception.UserNotFoundException;
 import io.hexlet.cv.model.User;
 import io.hexlet.cv.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,8 @@ public class UserUtils {
             return null;
         }
         var email = authentication.getName();
-        return userRepository.findByEmail(email).get();
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("User not found: " + email));
     }
 
     public boolean isAuthor(long userId) {
